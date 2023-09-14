@@ -9,9 +9,9 @@ export default function Home() {
 			<div className={styles.item}>
 				<h1 className={styles.title}>Full Stack Developer</h1>
 				<p className={styles.desc}>
-					Hi 👋, I'm Mateo, a Business Degree graduate turn full stack
-					developer based in Chile, Passionate about creating web
-					applications that are accessible to everyone.
+					Hi 👋, I&apos;m Mateo, a Business Degree graduate turn full
+					stack developer based in Chile, Passionate about creating
+					web applications that are accessible to everyone.
 				</p>
 
 				<Button text={'Check my work'} url="/portfolio" />
