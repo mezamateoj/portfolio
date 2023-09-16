@@ -41,7 +41,15 @@ const Navbar = () => {
 						{link.title}
 					</Link>
 				))}
-				<Button text="Download my CV" url="#" />
+				<a
+					href="/files/meza_resume.pdf"
+					alt="mateo meza resume pdf"
+					target="_blank"
+					rel="noopener noreferrer"
+					className={styles.resume}
+				>
+					Resume
+				</a>
 				{/* <button
 					className={styles.logout}
 					onClick={() => console.log('logout')}

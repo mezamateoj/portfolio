@@ -8,13 +8,13 @@ const Portfolio = () => {
 			{' '}
 			<h1 className={styles.selectTitle}>Some of my projects</h1>
 			<div className={styles.items}>
-				<Link href={'/portfolio/illustrations'} className={styles.item}>
+				<Link href={'/portfolio/doggyGo'} className={styles.item}>
 					<span className={styles.title}>DoggyGo</span>
 				</Link>
-				<Link href={'/portfolio/websites'} className={styles.item}>
+				<Link href={'/portfolio/pokemonApp'} className={styles.item}>
 					<span className={styles.title}>PokemonApp</span>
 				</Link>
-				<Link href={'/portfolio/application'} className={styles.item}>
+				<Link href={'/portfolio/worldNote'} className={styles.item}>
 					<span className={styles.title}>WorldNote</span>
 				</Link>
 			</div>

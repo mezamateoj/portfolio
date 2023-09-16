@@ -2,9 +2,9 @@ import React from 'react';
 import styles from './button.module.css';
 import Link from 'next/link';
 
-const Button = ({ text, url }) => {
+const Button = ({ text, url, target = '' }) => {
 	return (
-		<Link href={url}>
+		<Link href={url} target={target}>
 			<button className={styles.container}>{text}</button>
 		</Link>
 	);

@@ -6,13 +6,13 @@ import Link from 'next/link';
 const Footer = () => {
 	return (
 		<div className={styles.container}>
-			<div>2023 © Mateo Meza</div>
+			<div>2023 © Mateo Meza 🚀</div>
 			<div className={styles.socials}>
 				<Link href={'https://github.com/mezamateoj'} target="_blank">
 					<Image
 						src={'/github.png'}
-						width={15}
-						height={15}
+						width={20}
+						height={20}
 						alt="github icon"
 					/>
 				</Link>
@@ -22,8 +22,8 @@ const Footer = () => {
 				>
 					<Image
 						src={'/linkedin.png'}
-						width={15}
-						height={15}
+						width={20}
+						height={20}
 						alt="linkedin icon"
 					/>
 				</Link>

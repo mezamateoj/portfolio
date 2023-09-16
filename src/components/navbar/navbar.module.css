@@ -24,3 +24,19 @@
 	cursor: pointer;
 	border-radius: 3px;
 }
+
+.resume {
+	padding: 8px;
+	border: 2px solid #53c28b;
+	background-color: #53c28b;
+	color: white;
+	cursor: pointer;
+	border-radius: 5px;
+	font-weight: bold;
+}
+
+.resume:hover {
+	background-color: white;
+	border: 2px solid white;
+	color: #53c28b;
+}
