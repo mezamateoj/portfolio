@@ -16,7 +16,7 @@ const getData = (category) => {
 const Category = ({ params }) => {
 	const data = getData(params.category);
 	return (
-		<div>
+		<div className={styles.container}>
 			<h1 className={styles.mainTitle}>{params.category}</h1>
 			{data.map((item) => (
 				<div className={styles.item} key={item.id}>
@@ -30,9 +30,10 @@ const Category = ({ params }) => {
 					<div className={styles.imgContainer}>
 						<Image
 							className={styles.img}
-							fill={true}
 							src={item.image}
 							alt={item.title}
+							width={500}
+							height={500}
 						/>
 					</div>
 				</div>
