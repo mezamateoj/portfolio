@@ -1,11 +1,11 @@
 'use client';
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import styles from './navbar.module.css';
 import DarkModeToggle from '../darkmode/DarkModeToggle';
 import Button from '../button/Button';
 import Hamburger from '../hamburguer/Hamburger';
-import { useMediaQuery } from '@uidotdev/usehooks';
+import { ThemeContext, ThemeProvider } from '@/context/Context';
 
 const links = [
 	{
@@ -32,7 +32,7 @@ const links = [
 
 const Navbar = () => {
 	const [menuOpen, setMenuOpen] = useState(false);
-	const isSmallDevice = useMediaQuery('only screen and (max-width : 768px)');
+	const { mode } = useContext(ThemeContext);
 
 	const toggleMenu = () => {
 		setMenuOpen(!menuOpen);
@@ -48,39 +48,40 @@ const Navbar = () => {
 				<Link className={styles.logo} href={'/'}>
 					Mateo.
 				</Link>
-				{isSmallDevice && (
-					<Hamburger onClick={toggleMenu} menuOpen={menuOpen} />
-				)}
+
+				<Hamburger onClick={toggleMenu} menuOpen={menuOpen} />
 			</div>
 			<div
 				className={
-					menuOpen ? `${styles.links} ${styles.open}` : styles.links
+					menuOpen
+						? `${styles.links} ${styles.open} ${
+								mode === 'dark'
+									? styles.darkMode
+									: styles.lightMode
+						  }`
+						: styles.links
 				}
 			>
-				{(!isSmallDevice || menuOpen) && (
-					<>
-						{isSmallDevice ? '' : <DarkModeToggle />}
-						{links.map((link) => (
-							<Link
-								key={link.id}
-								href={link.url}
-								className={styles.link}
-								onClick={closeMenu}
-							>
-								{link.title}
-							</Link>
-						))}
-						<a
-							href="/files/meza_resume.pdf"
-							alt="mateo meza resume pdf"
-							target="_blank"
-							rel="noopener noreferrer"
-							className={styles.resume}
-						>
-							Resume
-						</a>
-					</>
-				)}
+				<DarkModeToggle />
+				{links.map((link) => (
+					<Link
+						key={link.id}
+						href={link.url}
+						className={styles.link}
+						onClick={closeMenu}
+					>
+						{link.title}
+					</Link>
+				))}
+				<a
+					href="/files/meza_resume.pdf"
+					alt="mateo meza resume pdf"
+					target="_blank"
+					rel="noopener noreferrer"
+					className={styles.resume}
+				>
+					Resume
+				</a>
 			</div>
 		</div>
 	);

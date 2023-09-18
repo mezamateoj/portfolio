@@ -41,6 +41,16 @@
 	color: #53c28b;
 }
 
+.menuToggle {
+	display: none; /* Hide the checkbox */
+}
+
+@media (max-width: 769px) {
+	.links {
+		display: none;
+	}
+}
+
 @media (max-width: 768px) {
 	.container {
 		height: auto;
@@ -49,6 +59,7 @@
 	}
 
 	.links.open {
+		display: flex;
 		transform: translateX(0);
 		top: 60px;
 		left: 0;
@@ -57,10 +68,20 @@
 		flex-direction: column;
 		justify-content: center;
 		position: absolute;
-		background-color: #111;
-		transition: all 0.5s;
+		transition: all 0.45s;
 		z-index: 1000;
 	}
+
+	.lightMode {
+		background-color: white;
+		color: #111;
+	}
+
+	.darkMode {
+		background-color: #111;
+		color: #bbb;
+	}
+
 	.logoHamburger {
 		display: flex;
 		flex-direction: row;
