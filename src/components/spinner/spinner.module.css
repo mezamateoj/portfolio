@@ -1,0 +1,49 @@
+.loading {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+	background-color: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	opacity: 0.8;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.loading.hidden {
+	opacity: 0;
+	pointer-events: none;
+}
+
+.loading.hidden .loading__spinner {
+	animation: none;
+}
+
+.loading__spinner {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: 4px solid #000;
+	border-top-color: transparent;
+	animation: spinner 0.5s linear infinite;
+}
+
+.loading__shadow {
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: 0.1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+@keyframes spinner {
+	to {
+		transform: rotate(360deg);
+	}
+}

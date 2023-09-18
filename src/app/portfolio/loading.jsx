@@ -1,9 +1,8 @@
-'use client';
 import Spinner from '@/components/spinner/Spinner';
 import React from 'react';
 
-const Loading = () => {
+const loading = () => {
 	return <Spinner />;
 };
 
-export default Loading;
+export default loading;
