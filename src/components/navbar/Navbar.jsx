@@ -1,9 +1,11 @@
 'use client';
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './navbar.module.css';
 import DarkModeToggle from '../darkmode/DarkModeToggle';
 import Button from '../button/Button';
+import Hamburger from '../hamburguer/Hamburger';
+import { useMediaQuery } from '@uidotdev/usehooks';
 
 const links = [
 	{
@@ -29,33 +31,56 @@ const links = [
 ];
 
 const Navbar = () => {
+	const [menuOpen, setMenuOpen] = useState(false);
+	const isSmallDevice = useMediaQuery('only screen and (max-width : 768px)');
+
+	const toggleMenu = () => {
+		setMenuOpen(!menuOpen);
+	};
+
+	const closeMenu = () => {
+		setMenuOpen(false);
+	};
+
 	return (
 		<div className={styles.container}>
-			<Link className={styles.logo} href={'/'}>
-				Mateo.
-			</Link>
-			<div className={styles.links}>
-				<DarkModeToggle />
-				{links.map((link) => (
-					<Link key={link.id} href={link.url} className={styles.link}>
-						{link.title}
-					</Link>
-				))}
-				<a
-					href="/files/meza_resume.pdf"
-					alt="mateo meza resume pdf"
-					target="_blank"
-					rel="noopener noreferrer"
-					className={styles.resume}
-				>
-					Resume
-				</a>
-				{/* <button
-					className={styles.logout}
-					onClick={() => console.log('logout')}
-				>
-					CV
-				</button> */}
+			<div className={styles.logoHamburger}>
+				<Link className={styles.logo} href={'/'}>
+					Mateo.
+				</Link>
+				{isSmallDevice && (
+					<Hamburger onClick={toggleMenu} menuOpen={menuOpen} />
+				)}
+			</div>
+			<div
+				className={
+					menuOpen ? `${styles.links} ${styles.open}` : styles.links
+				}
+			>
+				{(!isSmallDevice || menuOpen) && (
+					<>
+						{isSmallDevice ? '' : <DarkModeToggle />}
+						{links.map((link) => (
+							<Link
+								key={link.id}
+								href={link.url}
+								className={styles.link}
+								onClick={closeMenu}
+							>
+								{link.title}
+							</Link>
+						))}
+						<a
+							href="/files/meza_resume.pdf"
+							alt="mateo meza resume pdf"
+							target="_blank"
+							rel="noopener noreferrer"
+							className={styles.resume}
+						>
+							Resume
+						</a>
+					</>
+				)}
 			</div>
 		</div>
 	);
