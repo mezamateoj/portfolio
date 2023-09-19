@@ -27,7 +27,7 @@ const About = () => {
 						A passionate Business Graduate with a love for software
 						development and a knack for problem-solving. I
 						specialize in a range of programming languages including
-						JavaScript, TypeScript, Python, and SQL. My expertise
+						JavaScript, TypeScript, Python, and SQL. My experience
 						extends to various frameworks such as Next.js, React,
 						Redux, MaterialUI, Node.js, Sequelize, Mongoose,
 						Tailwind, and Astro.

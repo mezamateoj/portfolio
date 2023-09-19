@@ -23,6 +23,18 @@
 	object-fit: cover;
 }
 
+.link {
+	padding: 10px;
+	background-color: #53c28b;
+	border: none;
+	border-radius: 5px;
+	width: max-content;
+	color: #fff;
+	font-size: 15px;
+	cursor: pointer;
+	font-weight: bold;
+}
+
 .content {
 	flex: 1;
 	display: flex;

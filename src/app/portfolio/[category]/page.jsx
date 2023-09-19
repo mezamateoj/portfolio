@@ -23,8 +23,12 @@ const Category = ({ params }) => {
 					<div className={styles.content}>
 						<h1 className={styles.title}>{item.title}</h1>
 						<p className={styles.desc}>{item.desc}</p>
-						<a target="_blank" href={item.link}>
-							See more
+						<a
+							target="_blank"
+							href={item.link}
+							className={styles.link}
+						>
+							Check it Out!
 						</a>
 					</div>
 					<div className={styles.imgContainer}>
@@ -34,6 +38,8 @@ const Category = ({ params }) => {
 							alt={item.title}
 							width={500}
 							height={500}
+							priority
+							unoptimized={true}
 						/>
 					</div>
 				</div>

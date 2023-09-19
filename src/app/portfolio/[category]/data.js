@@ -22,12 +22,12 @@ export const items = {
     worldNote: [
         {
             id: 1,
-            title: "WorldNote App",
+            title: "WorldNotes.",
             desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur vel tenetur necessitatibus unde natus perspiciatis, amet cupiditate ducimus possimus, eaque ex autem id nobis eum dolorem. Neque eveniet fugiat tenetur?",
-            link: 'https://doggy-go.onrender.com/',
+            link: 'https://world-notes.vercel.app/',
 
             image:
-                "https://images.pexels.com/photos/3130810/pexels-photo-3130810.jpeg",
+                "/world.webp",
         },
 
     ],
