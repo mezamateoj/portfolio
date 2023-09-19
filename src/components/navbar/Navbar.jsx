@@ -74,7 +74,7 @@ const Navbar = () => {
 					</Link>
 				))}
 				<a
-					href="/files/meza_resume.pdf"
+					href="/files/MateoCVES.pdf"
 					alt="mateo meza resume pdf"
 					target="_blank"
 					rel="noopener noreferrer"
