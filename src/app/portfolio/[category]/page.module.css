@@ -20,7 +20,7 @@
 }
 
 .img {
-	object-fit: cover;
+	object-fit: scale-down;
 }
 
 .link {
@@ -33,6 +33,12 @@
 	font-size: 15px;
 	cursor: pointer;
 	font-weight: bold;
+}
+
+.references {
+	display: flex;
+	align-items: center;
+	gap: 8px;
 }
 
 .content {
@@ -66,8 +72,8 @@
 	}
 
 	.img {
-		width: 250px;
-		height: 250px;
+		width: 230px;
+		height: 230px;
 		object-fit: cover;
 	}
 

@@ -23,13 +23,22 @@ const Category = ({ params }) => {
 					<div className={styles.content}>
 						<h1 className={styles.title}>{item.title}</h1>
 						<p className={styles.desc}>{item.desc}</p>
-						<a
-							target="_blank"
-							href={item.link}
-							className={styles.link}
-						>
-							Check it Out!
-						</a>
+						<div className={styles.references}>
+							<a
+								target="_blank"
+								href={item.link}
+								className={styles.link}
+							>
+								Website &rarr;
+							</a>
+							<a
+								target="_blank"
+								href={item.git}
+								className={styles.link}
+							>
+								GitHub &rarr;
+							</a>
+						</div>
 					</div>
 					<div className={styles.imgContainer}>
 						<Image
