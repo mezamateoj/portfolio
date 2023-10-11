@@ -10,15 +10,15 @@ export const items = {
                 "/doggy.png",
         },
     ],
-    pokemonApp: [
+    chatPDF: [
         {
             id: 1,
-            title: "Pokemon App",
-            desc: "The Pokemon Project is a full-stack web application that allows users to interact with a comprehensive Pokemon database. It features functionalities such as searching for Pokemon by name, filtering them by various attributes like attack, name, type, and origin, as well as creating your own Pokemon. The application even integrates with DALL-E from OpenAI to generate images for newly created Pokemon.",
-            link: 'https://pokemon.up.railway.app/',
-            git: 'https://github.com/mezamateoj/Pokemon-Project',
+            title: "Chat PDF",
+            desc: "Web app based on a chat experience where users can upload PDF files, create chats around them, and interact with an AI assistant. The AI assistant uses the OpenAI API to generate responses based on the chat context",
+            link: 'https://ai-pdfchat.vercel.app/',
+            git: 'https://github.com/mezamateoj/pdf-chat',
             image:
-                "/pokemon.png",
+                "/chatpdf.png",
         },
     ],
     worldNote: [

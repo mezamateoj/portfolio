@@ -3,6 +3,8 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import Navbar from '@/components/navbar/Navbar'
 import { ThemeProvider } from '@/context/Context'
+import { Analytics } from '@vercel/analytics/react';
+
 
 
 
@@ -21,6 +23,7 @@ export default function RootLayout({ children }) {
           <div className='container'>
             <Navbar />
             {children}
+            <Analytics />
             <Footer />
           </div>
         </ThemeProvider>
