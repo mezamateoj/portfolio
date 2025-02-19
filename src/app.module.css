@@ -1,0 +1,99 @@
+.text {
+  display: block;
+  opacity: 1;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: bold;
+  font-variant-ligatures: normal;
+  visibility: visible;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.text p,
+.text h1 {
+  opacity: 0;
+  display: block;
+  visibility: visible;
+  animation: fadein 0.2s forwards ease-out;
+  margin-bottom: 1.5rem;
+}
+
+.text a {
+  text-decoration: none;
+  border-bottom: 3px solid currentColor;
+  color: inherit;
+  padding-bottom: 2px;
+  margin: 0 0.5rem;
+  font-weight: bold;
+}
+
+.text a:hover {
+  border-bottom-color: transparent;
+}
+
+.currentSection {
+  margin-top: 6rem;
+}
+
+.currentSection h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.currentList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.currentList li {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.currentList li:before {
+  content: "–";
+  margin-right: 1rem;
+}
+
+.link {
+  border-bottom: 3px solid currentColor;
+  display: inline-block;
+  line-height: 1;
+  text-decoration: none;
+  color: inherit;
+}
+
+.link:hover {
+  border-bottom-color: transparent;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@font-face {
+  font-family: "Scope";
+  src: url("https://temper.one/assets/fonts/Scope-Light.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Scope";
+  src: url("https://temper.one/assets/fonts/Scope-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
